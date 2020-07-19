@@ -3,7 +3,7 @@ pipeline {
 
    environment {
       SERVICE_NAME = "fleetman-queue"
-      ORGANIZATION_NAME = "Kudadigital"
+      ORGANIZATION_NAME = "kudadigital"
       YOUR_DOCKERHUB_USERNAME = "augeos" // (it doesn't matter if you don't have one)
      
       REPOSITORY_TAG="${YOUR_DOCKERHUB_USERNAME}/${ORGANIZATION_NAME}-${SERVICE_NAME}:${BUILD_ID}"
