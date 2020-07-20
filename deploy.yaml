@@ -15,7 +15,7 @@ spec:
       containers:
       - name: queue
         image: ${REPOSITORY_TAG}
-        imagePullPolicy: Never
+        imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
@@ -32,9 +32,8 @@ spec:
   ports:
     - name: http
       port: 8161
-      nodePort: 30010
 
     - name: endpoint
       port: 61616
 
-  type: NodePort
+  type: ClusterIP
